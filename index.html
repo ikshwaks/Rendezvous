@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	 <title>RENDEZVOUS</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/logic.js"></script>
+  <script>
+$(document).ready(function(){
+        $(".results").hide();
+});
+</script>
+  </head>
+  <body>
+    <div class="banner">RENDEZVOUS</div>
+    <!--<div style="height:10px;"></div>-->
+    <!-- <div class="menu_bar">
+      <span style="float:right;">
+        <ul>
+          <li><a href="#home"><span class="menu_item">Home</span></a></li>
+          <li><a href="#about"><span class="menu_item">About</span></a></li>
+        </ul>
+      </span>
+    </div> -->
+    <div class="inputs">
+      <span class="label">Your place</span> <input type="text" id="place1" placeholder="landmark" style="margin-right: 25px;"/>
+      <span class="label">Your friend's place</span> <input type="text" id="place2" placeholder="landmark" />
+      <br />
+      <span class="label">Where is your <em>Rendezvous</em>?</span>
+      <select id="type">
+        <option id='restaurant'>Restaurants</option>
+        <option id='park'>Parks</option>
+	       <option id='shopping_mall'>Shopping Malls</option>
+	        <option id='movie_theater'>Theatres</option>
+        <option id='museum'>Museums</option>
+      </select>
+      <br />
+      <div class="button"><a href="#list"><button onclick="startSearch()">SHOW!</button></a></div>
+    </div>
+	<br>
+  <div class="results">
+	<label class="disp" id="p1">&nbsp;</label><br /><br />
+	<label class="disp" id="p2">&nbsp;</label><br />
+	<!--<label class="disp" id="p4"> &nbsp;</label><br />
+	<label class="disp" id="p5"> &nbsp;</label><br />-->
+	<label class="disp" id="p7"> &nbsp;</label><br />
+</div>
+	<!--<label class="disp" id="p8"> &nbsp;</label><br />
+	<label class="disp" id="p9"> &nbsp;</label><br />
+	<br /><br /><br />-->
+    <div class="results"><a name="list">
+	<table border='1' id="list">
+		<thead><tr>
+			<th>No.</th>
+			<th><strong>NAME</strong></th>
+			<th><strong>VICINITY</strong></th>
+		</tr></thead>
+	<tbody id="tbody">
+	</tbody>
+ </table>
+<label id="results"></label>
+	<label id="td1"  style="text-align:center"></label>
+	<br><br><br></a>
+  </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOIoC6F5DoOSZdGR3TNxPpLS_-ykUn5AY&libraries=places&callback=initAutocomplete"
+        async defer></script>
+  </body>
+</html>
